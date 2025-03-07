@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 0.8;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem 3rem;
+            z-index: 2;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ccc;
+        }
+        nav div:first-child a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+        }
+        nav div:first-child a img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 2;
+        }
+        h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 0.15em solid #fff;
+            width: 0;
+            animation: typing 3s steps(17, end) forwards, blink 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 17ch; }
+        }
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: #fff; }
+        }
+        p {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+        .scroll {
+            position: absolute;
+            bottom: 2rem;
+            z-index: 2;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        section {
+            padding: 4rem 2rem;
+            background: #111;
+            text-align: left;
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        .portfolio-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .portfolio-item {
+            height: 300px;
+            background: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            border: 1px solid #333;
+        }
+        .info-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 4rem 2rem;
+            background: #000;
+            color: #fff;
+            text-align: left;
+        }
+        .info-text {
+            max-width: 650px;
+        }
+        .info-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .info-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .info-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <video autoplay muted loop>
+            <source src="car.mp4" type="video/mp4">
+        </video>
+        <nav>
+            <div><a href="#"><img src="KLogo.png" alt="Home"></a></div>
+            <div>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+        <h1>Abrar Hasin Kabbo</h1>
+        <p>United International University</p>
+        <div class="scroll">SCROLL</div>
+    </header>
+
+    <section class="info-section">
+        <div class="info-text">
+            <h2>Bio</h2>
+            <p>Born on 24 July, 2003 in Jhenaidah, Bangladesh.<br> Currently persuing Bsc in Electrical & Electronics Engineering(EEE) in United International University(UIU).<Br>Lives in Dhaka, Bangladesh.</p>
+            <h2>Experience</h2>
+            <p><strong>Project Coordinator Intern<br>IRIIC, UIU</strong><br>Assisting in various project tasks, including conducting research
+                and analysis. Currently handling the website (development &
+                content creation) of IRIIC,UIU</p>
+            <p><strong>Senior Executive of
+                Research and
+                Development
+                <br>UIU Entrepreneur
+                Development Forum</strong><br>Key member of the Data analytics division at R&D
+                prepared Data analysis reports;
+                planned, organized & voluntered multiple events and
+                programmes including our signature 'Banik Bazar' event.</p>
+        </div>
+        <div class="info-image">
+            <img src="Kabbo.jpg" alt="Info Image">
+        </div>
+    </section>
+</body>
+</html>
